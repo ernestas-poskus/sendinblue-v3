@@ -40,7 +40,7 @@ impl Default for Configuration {
     fn default() -> Self {
         let client = reqwest::Client::builder()
             .use_rustls_tls()
-            .trust_dns(true)
+            .hickory_dns(true)
             .build()
             .expect("valid client");
 
